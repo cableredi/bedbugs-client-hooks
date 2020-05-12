@@ -96,7 +96,7 @@
   .button,
   .form__button-group button {
     margin: 10px auto;
-    background-color: $background;
+    background-color: $backgroundButtons;
     width: 180px;
     padding: 10px 15px;
     border-radius: 5px;
@@ -111,9 +111,8 @@
     background-color: $buttonHoverColor;
     color: $buttonTextHoverColor;
     box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.5);
-    font-weight: 600;
+    font-weight: 500;
     transition: 0.3s;
-    border-radius: 10px;
   }
 
   .button-small {

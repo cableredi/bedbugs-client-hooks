@@ -47,7 +47,7 @@ export default function AddBug(props) {
   /* Handle Cancel Button */
   /************************/
   const handleClickCancel = () => {
-    history.push("/bugs");
+    history.goBack();
   };
 
   /****************************/

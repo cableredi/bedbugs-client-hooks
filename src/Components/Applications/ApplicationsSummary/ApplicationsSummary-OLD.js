@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import BlueBug from "../../Images/blue_bug.svg";
 import RedBug from "../../Images/red_bug.svg";
 import GreenBug from "../../Images/green_bug.svg";
-import EditApp from "../../Images/edit.svg";
+import EditApp from '../../Images/edit.svg';
 
 export default function ApplicationsSummary(props) {
   const { applications, bugs } = props;
@@ -15,22 +15,21 @@ export default function ApplicationsSummary(props) {
 
   return (
     <>
-      <div className="applications-list__name">
-        <NavLink
-          to={`/updateapplication/${applications.application_id}`}
-          isActive={isActive.bind(
-            this,
-            `application/${applications.application_id}`
-          )}
-        >
-          {applications.application_name}{" "}
-          <img src={EditApp} alt="Edit Application" />
-        </NavLink>
-      </div>
-      <div className="applications-list__counts counts-open">
+      <NavLink
+        className={"applications-list__name"}
+        to={`/updateapplication/${applications.application_id}`}
+        isActive={isActive.bind(
+          this,
+          `application/${applications.application_id}`
+        )}
+      >
+        {applications.application_name} <img src={EditApp} alt='Edit Application' />
+      </NavLink>
+
+      <div className="applications-list__counts">
         <span className="bold">
           <img src={RedBug} alt="Red Open Bug" className="bug__icons" />
-          Open:
+          Open bugs:
         </span>
         <span className="applications-list__counts-number">
           {getBugs.reduce(
@@ -49,14 +48,15 @@ export default function ApplicationsSummary(props) {
           </button>
         </NavLink>
       </div>
-      <div className="applications-list__counts counts-inProgress">
+
+      <div className="applications-list__counts">
         <span className="bold">
           <img
             src={BlueBug}
             alt="Blue In-Progress Bug"
             className="bug__icons"
           />
-          In-Progress:
+          In-Progress bugs:
         </span>
         <span className="applications-list__counts-number">
           {getBugs.reduce(
@@ -75,14 +75,15 @@ export default function ApplicationsSummary(props) {
           </button>
         </NavLink>
       </div>
-      <div className="applications-list__counts counts-closed">
+
+      <div className="applications-list__counts">
         <span className="bold">
           <img
             src={GreenBug}
             alt="Green In-Progress Bug"
             className="bug__icons"
           />
-          Closed:
+          Closed bugs:
         </span>
         <span className="applications-list__counts-number">
           {getBugs.reduce(
@@ -101,18 +102,16 @@ export default function ApplicationsSummary(props) {
           </button>
         </NavLink>
       </div>
-      <div className="applications-list__view">
-        <NavLink
-        className="applications-list__view"
-          to={`/bugs/All`}
-          isActive={isActive.bind(
-            this,
-            `application/${applications.application_id}`
-          )}
-        >
-          <button className="button">All Bugs</button>
-        </NavLink>
-      </div>
+
+      <NavLink
+        to={`/bugs/All`}
+        isActive={isActive.bind(
+          this,
+          `application/${applications.application_id}`
+        )}
+      >
+        <button className="button">View All Bugs</button>
+      </NavLink>
     </>
   );
 }

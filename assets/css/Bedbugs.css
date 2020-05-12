@@ -143,7 +143,7 @@ code {
 .Login__form .form__button-group button,
 .Registration__form .form__button-group button {
   margin: 10px auto;
-  background-color: #F2F2F2;
+  background-color: #D6EAF8;
   width: 180px;
   padding: 10px 15px;
   border-radius: 5px;
@@ -178,10 +178,9 @@ code {
   color: lightgray;
   -webkit-box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.5);
           box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.5);
-  font-weight: 600;
+  font-weight: 500;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  border-radius: 10px;
 }
 
 .Landing__demo .button-small, .applications .button-small, .Application__form .button-small, .bugs .button-small, .Bug__form .button-small, .Login__form .button-small, .Registration__form .button-small {
@@ -468,30 +467,25 @@ h1 {
   margin: 0;
 }
 
-.applications ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.applications {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.applications-list {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 10px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.applications li {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border: 1px solid black;
   border-radius: 5px;
   margin: 10px;
-  padding: 20px;
-  max-width: 350px;
+  padding: 10px 20px;
   background: lightgray;
   -webkit-box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.3);
           box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.3);
@@ -502,11 +496,15 @@ h1 {
 }
 
 .applications-list__name {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: bold;
   color: black;
   text-transform: uppercase;
-  margin-bottom: 20px;
+}
+
+.applications-list__name img {
+  width: 15px;
+  height: auto;
 }
 
 .applications-list__counts {
@@ -516,7 +514,6 @@ h1 {
   background-color: white;
   -webkit-box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.3);
           box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.3);
-  margin: 10px;
 }
 
 .applications-list__counts-number {
@@ -550,6 +547,97 @@ h1 {
   height: 30px;
   margin-left: 10px;
   padding: 2px;
+}
+
+.applications-list__view .button {
+  width: 100px;
+}
+
+@media (max-width: 720px) {
+  .applications-list {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+  }
+}
+
+@media (min-width: 721px) {
+  .applications-list {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+  .applications-list__name {
+    -ms-grid-row: 1;
+    grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1 / 4;
+  }
+  .applications-list__counts {
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+  .applications-list__counts .count-open {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+  }
+  .applications-list__counts .count-inProgress {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+  }
+  .applications-list__counts .count-closed {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3 / 4;
+  }
+  .applications-list__view {
+    -ms-grid-row: 3;
+    grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1 / 4;
+  }
+}
+
+@media (min-width: 801px) {
+  .applications-list {
+    -ms-grid-columns: 2fr 2fr 2fr 2fr 1fr;
+        grid-template-columns: 2fr 2fr 2fr 2fr 1fr;
+  }
+  .applications-list__name {
+    -ms-grid-row: 1;
+    grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+  }
+  .applications-list__counts {
+    -ms-grid-row: 1;
+    grid-row: 1;
+  }
+  .applications-list__counts .count-open {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+  }
+  .applications-list__counts .count-inProgress {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3 / 4;
+  }
+  .applications-list__counts .count-closed {
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 1;
+    grid-column: 4 / 5;
+  }
+  .applications-list__view {
+    -ms-grid-row: 1;
+    grid-row: 1;
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 1;
+    grid-column: 5 / 6;
+  }
 }
 
 .Application__form {

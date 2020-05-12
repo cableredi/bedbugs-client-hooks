@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect, useRef } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
 
 import Toolbar from "../Nav/Toolbar/Toolbar";
@@ -23,26 +23,17 @@ import PublicOnlyRoute from "../Helpers/PublicOnlyRoute";
 import BedbugsContext from "../../BedbugsContext";
 import { BedbugsProvider } from "../../BedbugsContext";
 
-function usePrevious(value) {
-  const ref = useRef();
-  useEffect(() => {
-    ref.current = value;
-  });
-  return ref.current;
-}
-
 export default function App() {
   const { setApplications, setBugs, setError, error } = useContext(BedbugsContext);
 
-  const { sideDrawerOpen, setSideDrawerOpen } = useState(false);
-
-  const prevSideDrawerOpen = usePrevious(sideDrawerOpen);
+  const [ sideDrawerOpen, setSideDrawerOpen ] = useState(false);
 
   /*******************************/
   /* Sidebar and backdrop toggles */
   /*******************************/
   const drawerToggleClickHandler = () => {
-    sideDrawerOpen(!prevSideDrawerOpen);
+    let prevSideDrawerOpen = sideDrawerOpen;
+    setSideDrawerOpen(!prevSideDrawerOpen);
   };
 
   const backdropClickHandler = () => {

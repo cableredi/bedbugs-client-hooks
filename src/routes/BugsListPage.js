@@ -6,9 +6,6 @@ export default function BugsListPage(props) {
   const { applications, bugs } = useContext(BedbugsContext);
   const { status, application_id } = props.match.params;
 
-  console.log("applications", applications);
-  console.log("bugs", bugs);
-
   let getBugs = [];
   let getApplications = [];
 
@@ -25,6 +22,5 @@ export default function BugsListPage(props) {
     getApplications = applications;
   }
 
-  //return <BugsList applications={applications} bugs={bugs} />;
   return <BugsList applications={getApplications} bugs={getBugs} />;
 }

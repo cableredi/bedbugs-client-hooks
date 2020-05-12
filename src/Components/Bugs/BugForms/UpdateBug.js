@@ -89,7 +89,7 @@ export default function UpdateBug(props) {
   /* Handle Cancel button */
   /************************/
   const handleClickCancel = () => {
-    history.push("/bugs");
+    history.goBack();
   };
 
   /************************/

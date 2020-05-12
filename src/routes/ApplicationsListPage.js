@@ -7,9 +7,9 @@ export default function ApplicationsListPage() {
   const { applications, bugs, error } = useContext(BedbugsContext);
 
   const applicationItems = applications.map((appl) => (
-    <li key={appl.application_id}>
+    <div className="applications-list" key={appl.application_id}>
       <ApplicationsSummary applications={appl} bugs={bugs} />
-    </li>
+    </div>
   ));
 
   return (
@@ -18,10 +18,10 @@ export default function ApplicationsListPage() {
         <>
           <h1>Applications Summary</h1>
           <div className="applications">
+            <div>{applicationItems}</div>
             <NavLink to="/addApplication">
               <div className="button">Add Application</div>
             </NavLink>
-            <ul>{applicationItems}</ul>
           </div>
         </>
       ) : (
