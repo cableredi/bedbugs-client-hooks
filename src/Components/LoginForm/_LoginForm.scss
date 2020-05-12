@@ -1,0 +1,99 @@
+.Login__form {
+  @extend %form-shared;
+  @extend %buttons-shared;
+}
+
+.Login__form {
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  max-width: 900px;
+  background-color: $backgroundItems;
+}
+
+.flex-outer li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.flex-outer li label,
+.flex-outer li p {
+  padding: 8px;
+  font-weight: 600;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.flex-outer li input,
+.flex-outer li textarea {
+  padding: 5px;
+  border: none;
+  width: 80%;
+  max-width: 500px;
+}
+
+.flex-outer li textarea {
+  max-height: 50px;
+}
+
+@media (max-width: 550px) {
+  .Login__form {
+    margin: 0 30px;
+  }
+
+  .Login__form label {
+    text-align: center;
+  }
+
+  .flex-outer li textarea {
+    margin: 0 auto;
+  }
+
+  .flex-outer > li > label {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .Login__form select {
+    margin: 0 auto;
+    display: block;
+  }
+
+  input {
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 551px) {
+  .Login__form {
+    margin: 0 auto;
+  }
+
+  .flex-outer > li > label {
+    max-width: 200px;
+  }
+
+  .flex-outer li input,
+  .flex-outer li textarea {
+    max-width: 300px;
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 850px) {
+  .Login__form {
+    margin: 0 auto;
+  }
+
+  .flex-outer > li > label {
+    max-width: 300px;
+  }
+
+  .flex-outer li input,
+  .flex-outer li textarea {
+    max-width: 500px;
+  }
+}

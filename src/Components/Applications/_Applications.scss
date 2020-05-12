@@ -1,0 +1,49 @@
+.applications {
+  @extend %buttons-shared;
+  @extend %bugs-shared;
+}
+
+.applications ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.applications li {
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 20px 30px;
+  max-width: 300px;
+  background: $backgroundItems;
+  box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+.applications-list__items {
+  border: 1px solid black;
+}
+
+.applications-list__name {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: $textColor;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.applications-list__counts {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: white;
+  box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.3);
+  margin: 10px;
+}
+
+.applications-list__counts-number {
+  color: $accentColor;
+  font-weight: bold;
+  margin-left: 10px;
+}

@@ -1,0 +1,14 @@
+.Landing__demo {
+  @extend %buttons-shared;
+  border: 1px solid black;
+  box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  width: 300px;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: $backgroundItems;
+}
+
+.Landing__demo h1 {
+  margin: 0;
+}
