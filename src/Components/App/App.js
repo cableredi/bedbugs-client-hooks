@@ -53,7 +53,6 @@ export default function App() {
   /* get applications and bugs from db if logged in */
   /**************************************************/
   useEffect(() => {
-    console.log("app UseEffect");
     if (TokenService.hasAuthToken()) {
       const applicationsRequest = ApplicationsApiService.getAll();
       const bugsRequest = BugsApiService.getAll();
@@ -128,7 +127,7 @@ export default function App() {
           {/* Bugs Summary */}
           <PrivateRoute
             exact
-            path="/bugs"
+            path="/bugs/:status/:application_id?"
             component={(routeProps) => <BugsListPage {...routeProps} />}
           />
           {/* Add a Bug */}

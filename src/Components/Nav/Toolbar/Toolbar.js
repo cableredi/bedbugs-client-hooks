@@ -19,7 +19,7 @@ export default class Toolbar extends Component {
           </NavLink>
         </li>
         <li>
-          <NavLink to='/bugs'>
+          <NavLink to='/bugs/All'>
             Bugs
           </NavLink>
         </li>

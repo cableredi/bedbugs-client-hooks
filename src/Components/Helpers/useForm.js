@@ -91,8 +91,6 @@ export default function useForm(
         }
       }
 
-      console.log('error ', name, error)
-
       return error;
     },
     [stateValidatorSchema]

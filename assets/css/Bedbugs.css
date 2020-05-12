@@ -184,6 +184,29 @@ code {
   border-radius: 10px;
 }
 
+.Landing__demo .button-small, .applications .button-small, .Application__form .button-small, .bugs .button-small, .Bug__form .button-small, .Login__form .button-small, .Registration__form .button-small {
+  margin: 10px auto;
+  background-color: #F2F2F2;
+  width: 100px;
+  padding: 3px 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 0px 3px rgba(0, 0, 0, 0.5);
+          box-shadow: 1px 0px 3px rgba(0, 0, 0, 0.5);
+}
+
+.Landing__demo .button-small:hover, .applications .button-small:hover, .Application__form .button-small:hover, .bugs .button-small:hover, .Bug__form .button-small:hover, .Login__form .button-small:hover, .Registration__form .button-small:hover,
+.Landing__demo .button-small:focus,
+.applications .button-small:focus,
+.Application__form .button-small:focus,
+.bugs .button-small:focus,
+.Bug__form .button-small:focus,
+.Login__form .button-small:focus,
+.Registration__form .button-small:focus {
+  background-color: lightgray;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
 .applications .bug__icons, .bugs .bug__icons, .notFound-page .bug__icons {
   height: 40px;
   width: 40px;
@@ -467,8 +490,8 @@ h1 {
   border: 1px solid black;
   border-radius: 5px;
   margin: 10px;
-  padding: 20px 30px;
-  max-width: 300px;
+  padding: 20px;
+  max-width: 350px;
   background: lightgray;
   -webkit-box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.3);
           box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.3);
@@ -500,6 +523,33 @@ h1 {
   color: darkgreen;
   font-weight: bold;
   margin-left: 10px;
+}
+
+.applications svg {
+  stroke: #000;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+.applications .inprogress svg {
+  stroke: blue;
+}
+
+.applications .open svg {
+  stroke: red;
+}
+
+.applications .closed svg {
+  stroke: green;
+}
+
+.applications .button-small {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  padding: 2px;
 }
 
 .Application__form {

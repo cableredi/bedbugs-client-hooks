@@ -35,8 +35,6 @@ export default function AddBug(props) {
   const onSubmitForm = (state) => {
     const bug = state;
 
-    console.log('state', state)
-
     BugsApiService.postBug(bug)
       .then((data) => {
         addBug(data);

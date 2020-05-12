@@ -18,15 +18,14 @@ export default function ApplicationsListPage() {
         <>
           <h1>Applications Summary</h1>
           <div className="applications">
-            <ul>{applicationItems}</ul>
-
             <NavLink to="/addApplication">
               <div className="button">Add Application</div>
             </NavLink>
+            <ul>{applicationItems}</ul>
           </div>
         </>
       ) : (
-        <div>There was an error</div>
+        <div>There was an error: {error}</div>
       )}
     </section>
   );

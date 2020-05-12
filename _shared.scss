@@ -115,6 +115,20 @@
     transition: 0.3s;
     border-radius: 10px;
   }
+
+  .button-small {
+    margin: 10px auto;
+    background-color: $background;
+    width: 100px;
+    padding: 3px 5px;
+    border-radius: 5px;
+    box-shadow: 1px 0px 3px rgba(0, 0, 0, 0.5);
+  }
+  .button-small:hover,
+  .button-small:focus {
+    background-color: $backgroundItems;
+    transition: 0.3s;
+  }
 }
 
 %bugs-shared {
